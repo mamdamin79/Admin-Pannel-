@@ -1,5 +1,113 @@
+/* import poppins font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lato:wght@300;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+/* reset css */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s e;
+    -moz-transition: all 0.2s e;
+    -ms-transition: all 0.2s e;
+    -o-transition: all 0.2s e;
 }
+a{
+    text-decoration: none;
+}
+input,button{
+    border: none;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+:root{
+    --primary--color:#a21caf;
+    --black--color:#000;
+    --light--black--color:#1c1917;
+    --hover--color:#d946ef;
+}
+
+/* styling nav section */
+nav{
+    width:20rem;
+    border-right:1px solid #ccc;
+    height: 100vh;
+    padding:1rem;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+nav .logo-container{
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    border-bottom:1px solid #ccc;
+
+}
+.logo-text{
+    font-size:21px;
+    font-weight:bold;
+    color: var(--black--color);
+}
+.navLink-text{
+    font-size:19px;
+    font-weight:420;
+    color: var(--light--black--color);
+}
+
+li:hover i,li:hover a{
+    color: var(--hover--color);
+}
+.option-container{
+    border-top:1px solid #ccc;
+}
+nav li {
+    padding:1rem 0
+}
+nav i{
+    font-size:22px;
+    font-weight:bold;
+    padding:0.5rem;
+}
+.toggle{
+    background-color: rgb(190, 190, 190);
+    width:40px;
+    height:20px;
+    margin-right:1rem;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    position: relative;
+}
+.toggle-container{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.pointer-toggle{
+    width:15px;
+    height:12px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    background-color: rgb(250, 245, 245) ;
+    position:absolute;
+    left:5%;
+    top:20%;
+    z-index: 10;
+    cursor: pointer;
+}
+/* nav section styling finished */
+
