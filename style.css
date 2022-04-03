@@ -30,19 +30,26 @@ body{
     width: 100%;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
+    display: flex;
 
 }
 body.dark{
     --black--color:#000;
-    --light--black--color:#6a6a6d;
+    --light--black--color:#777779;
     --hover--color:#d946ef;
-    background-color:#18181b
+    background-color:#18181b;
+    --box1--color:#303030;
+    --box2--color:#303030;
+    --box3--color:#303030;
 }
 :root{
     --primary--color:#a21caf;
     --black--color:#000;
     --light--black--color:#1c1917;
     --hover--color:#d946ef;
+    --box1--color:#fb7185;
+    --box2--color:#818cf8;
+    --box3--color:#bef264;
 }
 
 /* styling nav section */
@@ -77,6 +84,13 @@ nav .logo-container i{
 }
 .logo-text.hidden{
     display:none;
+}
+.navLink-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    
 }
 .navLink-text{
     font-size:19px;
@@ -159,21 +173,25 @@ nav i{
 /* nav section styling finished */
 
 /* top bar */
+.container{
+    width:95%;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.container.close{
+    width:95%;
+}
+
 header{
-    position:absolute;
-    top:0;
-    left:20%;
     display: flex;
     align-items:center;
     padding:1rem;
-    width:80%;
+    width:100%;
     justify-content:space-between;
     border-bottom: 1px solid #ccc;
 }
-header.open{
-    left: 5%;
-    width:95%;
-}
+
 header i {
     font-size:24px;
     font-weight:bolder;
@@ -204,6 +222,8 @@ input{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border: 1px solid #ccc;
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07); 
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07);
 }
 input:focus{
     border: 1px solid var(--primary--color)
@@ -226,3 +246,105 @@ input:focus{
     -o-border-radius:5px;
 }
 /* top bar styling finished */
+/* box section styling*/
+.box-section{
+    padding:1rem;
+    border-bottom:1px solid #ccc;
+    width:100%;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.title-container i{
+    font-size: 22px;
+    color:#fff;
+    width:40px;
+    background-color: var(--primary--color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:30px;
+    margin-right:0.5rem;
+}
+.title{
+    color: var(--light--black--color);
+}
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content:center;
+    margin: 20px auto;
+    gap: 15px;
+
+}
+.boxes .box{
+    width: 300px;
+    height:200px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07); 
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07);
+}
+.box i{
+    font-size: 24px;
+    font-weight:bolder;
+    color: var(--light--black--color);
+
+}
+.box p{
+    font-size:20px;
+    color: var(--light--black--color);
+    font-weight:450;
+}
+.box h3{
+    color: var(--light--black--color);
+}
+.box1{
+    background-color: var(--box1--color);
+}
+.box2{
+    background-color: var(--box2--color);
+}
+.box3{
+    background-color: var(--box3--color);
+}
+/* box section styling finished*/
+/* styling recently activity */
+.recently-activity{
+    width:100%;
+    padding:1rem
+}
+.info-titles{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    color: var(--light--black--color);
+}
+.users{
+    height:35vh;
+    overflow: scroll;
+}
+.user{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px auto;
+    padding:1rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07); 
+    box-shadow: 5px 5px 15px -2px rgba(0,0,0,0.07);
+    color: var(--light--black--color)
+}
+/* recently activity styling finished*/
